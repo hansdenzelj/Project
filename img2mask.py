@@ -3,8 +3,6 @@
 
 import os
 import argparse as ap
-from pathlib import Path
-from PIL import Image
 
 import numpy as np
 import cv2 as cv
