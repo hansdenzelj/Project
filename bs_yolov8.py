@@ -46,14 +46,13 @@ while True:
     cv.FONT_HERSHEY_SIMPLEX, 0.5 , (0,0,0))
 
     cv.imshow("Hello", annotated_frame)
-    bg = np.zeros(frame.shape)
 
     print(results[0])
 
     if(results[0].masks is not None): #a mask has been generated
         mask_data = results[0].masks[0].data.cpu().numpy().transpose(1, 2, 0)
-        mask_data = np.asarray(mask_data)
-        mask_data = np.resize(mask_data, (480, 640))
+        mask_data = np.asarray(mask_data) #tuple to array
+        mask_data = np.resize(mask_data, (480, 640)) #match opencv resolution
         mask_data *= 255
 
         masked_frame = frame
