@@ -2,3 +2,5 @@ output
 poses
 .onnx
 .pt
+yolov8x-seg.onnx
+yolov8x-seg.pt
